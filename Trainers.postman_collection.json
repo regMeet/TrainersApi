@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "b10e5120-353b-4859-9dac-a3799ec8e251",
+		"name": "Trainers",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "86815"
+	},
+	"item": [
+		{
+			"name": "Get all trainers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/trainers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"trainers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get trainer by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/trainers/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"trainers",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get trainer by name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/trainers/name/albertengo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"trainers",
+						"name",
+						"albertengo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new trainer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"alan.albertengo@gmail.com\",\r\n    \"phoneNumber\": \"1234567842\",\r\n    \"firstName\": \"Alan\",\r\n    \"lastName\": \"Albertengo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/trainers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"trainers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new trainer - errors",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"alan.albertengo@gmail.com\",\r\n    \"lastName\": \"Albertengo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/trainers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"trainers"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

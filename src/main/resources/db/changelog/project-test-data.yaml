@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - changeSet:
+      context: test
+      id: insert data into user table
+      author: Alan Albertengo
+      comment: test data
+      changes:
+        - insert:
+            tableName: _trainer
+            columns:
+              - column:
+                  name: email
+                  value: trainer@campgladiator.com
+              - column:
+                  name: phone
+                  value: 5125125120
+              - column:
+                  name: first_name
+                  value: Fearless
+              - column:
+                  name: last_name
+                  value: Contender
